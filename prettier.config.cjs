@@ -17,12 +17,14 @@ module.exports = {
   importOrder: [
     'react',
     'next',
-    '^[.]', // relative imports
     '^@components/(.*)$',
     '^@lib/(.*)$',
-    '^@heroicons/(.*)$',
+    '^[.]', // relative imports
     '^[./]',
     '<BUILTIN_MODULES>', // Node.js built-in modules
     '<THIRD_PARTY_MODULES>', // Imports not matched by other special words or groups.
   ],
+  // ensure that the class sorting takes into consideration any of your project's Tailwind customizations
+  // uncomment and modify next line if file name or location of tailwind config file has changed
+  // tailwindConfig: './styles/tailwind.config.ts', 
 };

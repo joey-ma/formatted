@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/joey-ma/formatted/issues"
   },
-  "homepage": "https://github.com/joey-ma/formatted#readme"
+  "homepage": "https://github.com/joey-ma/formatted#readme",
+  "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "prettier-plugin-tailwindcss": "^0.5.11"
+  }
 }
