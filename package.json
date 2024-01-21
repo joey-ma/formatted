@@ -1,0 +1,19 @@
+{
+  "name": "@joey-ma/formatted",
+  "version": "0.0.1",
+  "description": "My personal Prettier config",
+  "main": "prettier.config.cjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joey-ma/formatted.git"
+  },
+  "author": "Joey Ma <03-repast-wrap@icloud.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joey-ma/formatted/issues"
+  },
+  "homepage": "https://github.com/joey-ma/formatted#readme"
+}
