@@ -1,0 +1,15 @@
+{
+  "cSpell.words": ["ianvs", "clsx"],
+  "css.customData": ["./.vscode/tailwindcss.json"],
+  "cSpell.diagnosticLevel": "Hint",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "tailwindCSS.experimental.classRegex": [
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ],
+  "workbench.colorCustomizations": {
+    "editorHint.foreground": "#ff0000",
+    "editorHint.border": "#ff0000"
+  }
+}

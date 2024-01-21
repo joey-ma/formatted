@@ -1,6 +1,6 @@
 {
   "name": "@joey-ma/formatted",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "My personal Prettier config",
   "main": "prettier.config.cjs",
   "scripts": {
