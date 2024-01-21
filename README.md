@@ -1,27 +1,50 @@
 # `@joey-ma/formatted`
 
-> My personal [Prettier](https://prettier.io) config.
+This is my personal [Prettier](https://prettier.io) config that I generally like to use.
+
+If you have an idea on how to improve this package, please create an issue.
 
 ## Usage
 
 **Install**:
 
+After you have `prettier` installed, install this prettier config and related dependencies.
+
 ```bash
-$ npm i -D @joey-ma/formatted
+npm i -D @joey-ma/formatted
 ```
 
-**Edit `package.json`**:
+```bash
+npm i -D @ianvs/prettier-plugin-sort-imports
+```
+
+```bash
+npm i -D prettier-plugin-tailwindcss
+```
+
+**Edit `package.json`** to include:
 
 ```jsonc
 {
   // ...
   "prettier": "@joey-ma/formatted",
+  // ...
+}
+```
+
+If needed, run `npm ci` and/or reload your editor window.
+
+This should work already even if you have a basic `.eslintrc.json` such as:
+
+```jsonc
+{
+  "extends": "next/core-web-vitals",
 }
 ```
 
 ## Additional Configurations
 
-This project includes both of the files mentioned below.
+This repository includes both of the files mentioned below.
 
 - `.vscode/settings.json`
 - `.vscode/tailwindcss.json`
