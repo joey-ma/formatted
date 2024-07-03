@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["ianvs", "clsx"],
+  "cSpell.words": ["adduser", "clsx", "ianvs"],
   "css.customData": ["./.vscode/tailwindcss.json"],
   "cSpell.diagnosticLevel": "Hint",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
