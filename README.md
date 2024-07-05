@@ -38,7 +38,6 @@ Edit, or run the following command, to include:
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.3",
     "eslint-plugin-tailwindcss": "^3.17.4",
-    "prettier-eslint": "^16.3.0",
   },
   "prettier": "@joey-ma/formatted",
   "type": "module"
@@ -74,7 +73,6 @@ Should give you the same effect as the following:
 		"eslint-plugin-react": "^7.34.3",
 		"eslint-plugin-tailwindcss": "^3.17.4",
 		"postcss": "^8",
-		"prettier-eslint": "^16.3.0",
 		"tailwindcss": "^3.4.4",
 		"typescript": "^5.4.0"
 	},
