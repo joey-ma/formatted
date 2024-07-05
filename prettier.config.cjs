@@ -11,8 +11,8 @@ module.exports = {
   singleQuote: true,
   // since prettier 3.0, manually specifying plugins is required
   plugins: [
-    require('@ianvs/prettier-plugin-sort-imports'),
-    import('prettier-plugin-tailwindcss'),
+    '@ianvs/prettier-plugin-sort-imports',
+    'prettier-plugin-tailwindcss',
   ],
   importOrder: [
     '<TYPES>^(node:)',
