@@ -18,8 +18,10 @@ module.exports = {
     '<TYPES>^(node:)',
     '<TYPES>',
     '<TYPES>^[.]',
-    'react',
-    'next',
+    '^next$',
+    '^next(/.*)$',
+    '^react$',
+    '^react(/.*)$',
     '<BUILT_IN_MODULES>', // Node.js built-in modules
     '<THIRD_PARTY_MODULES>', // imports not matched by other special words or groups.
     '^(@api|@assets@components|@lib|@ui|)(/.*)$',
