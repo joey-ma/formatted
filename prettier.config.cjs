@@ -29,5 +29,5 @@ module.exports = {
   ],
   // ensure that the class sorting takes into consideration any of your project's Tailwind customizations
   // comment or modify next line if file name or location of tailwind config file has changed (e.g., here it is changed from `.js` to `.ts`)
-  tailwindConfig: '.tailwind.config.ts',
+  tailwindConfig: 'tailwind.config.ts',
 };
