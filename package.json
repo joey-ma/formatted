@@ -1,6 +1,6 @@
 {
   "name": "@joey-ma/formatted",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "My personal Prettier config",
   "publishConfig": {
     "access": "public"
