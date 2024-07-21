@@ -12,11 +12,11 @@ If you have an idea on how to improve this package, please create an issue.
 
 ## Usage
 
-**Install**:
+### Install:
 
 There are two general ways of installing your dependencies:
 
-### Option 1: using cli
+#### Option 1: using cli
 
 You can install dependencies one by one, or all together by copying and entering the cli command below.
 
@@ -32,7 +32,7 @@ npm i -D eslint
             @joey-ma/formatted
 ```
 
-### Option 2: edit your `package.json`
+#### Option 2: edit your `package.json`
 
 In addition to `eslint` and `prettier`, you can install related dependencies by editing your `package.json`'s `devDependencies` to include the following:
 
@@ -122,6 +122,10 @@ This should work already even if you have a basic `.eslintrc.json` such as:
 }
 ```
 
+### Additional Configurations
+
+#### Configuring ESLint
+
 Nonetheless, I like to configure my settings further & use a `.eslintrc.cjs` instead.
 
 ```js
@@ -155,9 +159,14 @@ I like my code formatted and linted as I go, and with VS Code, it is pretty easy
 
 Set your "Default Formatter" to `ESLint`, with "Format On Save" checked, and set "Format On Save Mode" to `file`.
 
-**Note:** Here we are running Prettier as if it is a linter rule. By running Prettier inside your linters, you didn’t have to set up any new infrastructure and you could re-use your editor integrations for the linters. [Reference](https://prettier.io/docs/en/integrating-with-linters.html#docsNav). This is my preference as this resolves most of the formatting and linter issues before running `prettier . --write` or `npx eslint --ext .jsx --ext .js .`, etc.
+**Note:** Here we are running Prettier as if it is a linter rule. By running Prettier inside your linters, you didn’t have to set up any new infrastructure and you could re-use your editor integrations for the linters.
 
-## Additional Configurations
+Reference: [Integrating with Linters](https://prettier.io/docs/en/integrating-with-linters.html#docsNav).
+
+This is my preference as this resolves most of the formatting and linter issues before running `prettier . --write` or `npx eslint --ext .jsx --ext .js .`, etc.
+To me, this is like practicing shift-left relating to code quality.
+
+#### Add scripts to your `package.json`
 
 Don't forget to add these helpful scripts in your `package.json`.
 
@@ -171,6 +180,8 @@ Don't forget to add these helpful scripts in your `package.json`.
   }
 }
 ```
+
+#### Adding custom at(@) rules
 
 This repository includes both of the files mentioned below.
 
@@ -197,8 +208,10 @@ Create a `tailwindcss.json` file inside `.vscode` directory in the root folder o
 
 Copy `.vscode/settings.json` into your root directory.
 Add a `css.customData` key that points to the `tailwindcss.json` file **relative to the workspace root directory**.
+
 Ref: [Adding Custom At Rules](https://www.codeconcisely.com/posts/tailwind-css-unknown-at-rules/#adding-custom-at-rules)
-Additional comments included below.
+
+Additional comments included below:
 
 ```jsonc
 {
