@@ -1,87 +1,118 @@
 # `@joey-ma/formatted`
 
-This is my personal [Prettier](https://prettier.io) config that I generally like to use.
+I rely on [Prettier](https://prettier.io) for formatting, and [ESLint](https://eslint.org/) for linting and catching bugs.
+
+This is my personal preferred `prettier` config for JavaScript and TypeScript.
+
+Listed below are instructions on how I'd set up my Next.js (my go-to framework) project, with `eslint` configured.
 
 If you have an idea on how to improve this package, please create an issue.
+
+**Note:** Since many of the related plugins are not ready for eslint 9 yet, I'll consider revamping my configuration later.
 
 ## Usage
 
 **Install**:
 
-After you have `prettier` installed, install this prettier config and related dependencies.
+There are two general ways of installing your dependencies:
+
+### Option 1: using cli
+
+You can install dependencies one by one, or all together by copying and entering the cli command below.
 
 ```bash
-npm i -D @joey-ma/formatted @ianvs/prettier-plugin-sort-imports prettier-plugin-tailwindcss
+npm i -D eslint
+            eslint-config-prettier
+            eslint-plugin-prettier
+            eslint-plugin-react
+            eslint-plugin-tailwindcss
+            prettier
+            prettier-plugin-tailwindcss
+            @ianvs/prettier-plugin-sort-imports
+            @joey-ma/formatted
 ```
 
-**`package.json`**
+### Option 2: edit your `package.json`
 
-Edit, or run the following command, to include:
+In addition to `eslint` and `prettier`, you can install related dependencies by editing your `package.json`'s `devDependencies` to include the following:
+
+1. eslint-config-prettier
+1. eslint-plugin-prettier
+1. eslint-plugin-react
+1. eslint-plugin-tailwindcss
+1. @ianvs/prettier-plugin-sort-imports
+1. @joey-ma/formatted
+
+Here's an example of how it would look like:
 
 ```jsonc
+// in a Next.js (with TypeScript) project
 {
+  // dependencies & devDependencies that came with `npx create-next-app@latest`
+  "dependencies": {
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+  },
   "devDependencies": {
-    "@eslint/js": "^9.6.0",
-    "@ianvs/prettier-plugin-sort-imports": "^4.3.0",
-    "@joey-ma/formatted": "^0.0.8",
-    // came with `npx create-next-app@latest`
     "typescript": "^5.4.0",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "postcss": "^8", 
+    "postcss": "^8",
     "tailwindcss": "^3.4.4",
-    "eslint": "^8.57.0",
-    "eslint-config-next": "14.2.4",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
     // additional config
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@joey-ma/formatted": "^0.0.12",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-prettier": "^5.1.3",
-    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
     "eslint-plugin-tailwindcss": "^3.17.4",
+    "prettier": "^3.3.3",
   },
   "prettier": "@joey-ma/formatted",
-  "type": "module"
+  "type": "module",
 }
 ```
 
 I have them alphabetically ordered since I tend to use cli to install packages.
 
-```
-npm i -D eslint-config-prettier eslint-plugin-prettier eslint-plugin-react eslint-plugin-tailwindcss prettier-eslint
-```
-
-Should give you the same effect as the following:
+However, it should give you the same outcome, just in a different order, like so:
 
 ```jsonc
+// in a Next.js (with TypeScript) project
 {
-  // alphabetically ordered
-	"dependencies": {
-		"next": "14.2.4",
-		"react": "^18",
-		"react-dom": "^18"
-	},
-	"devDependencies": {
-		"@ianvs/prettier-plugin-sort-imports": "^4.3.0",
-		"@joey-ma/formatted": "^0.0.8",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"eslint": "^8.57.0",
-		"eslint-config-next": "14.2.4",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-prettier": "^5.1.3",
-		"eslint-plugin-react": "^7.34.3",
-		"eslint-plugin-tailwindcss": "^3.17.4",
-		"postcss": "^8",
-		"tailwindcss": "^3.4.4",
-		"typescript": "^5.4.0"
-	},
-	"prettier": "@joey-ma/formatted",
-	"type": "module"
+  "dependencies": {
+    "next": "14.2.4",
+    "react": "^18",
+    "react-dom": "^18",
+  },
+  "devDependencies": {
+    // alphabetically ordered
+    "@ianvs/prettier-plugin-sort-imports": "^4.3.1",
+    "@joey-ma/formatted": "^0.0.12",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-plugin-react": "^7.35.0",
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "postcss": "^8",
+    "prettier": "^3.3.3",
+    "tailwindcss": "^3.4.6",
+    "typescript": "^5.5.3",
+  },
+  "prettier": "@joey-ma/formatted",
+  "type": "module",
 }
 ```
 
-Run `npm i && npm ci` as needed, and reload your editor window.
+Run `npm i` or `npm ci` as needed, and reload your editor window as needed.
 
 This should work already even if you have a basic `.eslintrc.json` such as:
 
@@ -91,7 +122,7 @@ This should work already even if you have a basic `.eslintrc.json` such as:
 }
 ```
 
-However, I like my code clean, so I configure things to my liking.
+Nonetheless, I like to configure my settings further & use a `.eslintrc.cjs` instead.
 
 ```js
 // .eslintrc.cjs
@@ -120,10 +151,26 @@ module.exports = {
 };
 ```
 
-I like my code formatted and linted as I go.
-Set your default formatter to `ESLint` with `Format On Save` checked (Format On Save Mode: `file`).
+I like my code formatted and linted as I go, and with VS Code, it is pretty easy to do.
+
+Set your "Default Formatter" to `ESLint`, with "Format On Save" checked, and set "Format On Save Mode" to `file`.
+
+**Note:** Here we are running Prettier as if it is a linter rule. By running Prettier inside your linters, you didn’t have to set up any new infrastructure and you could re-use your editor integrations for the linters. [Reference](https://prettier.io/docs/en/integrating-with-linters.html#docsNav). This is my preference as this resolves most of the formatting and linter issues before running `prettier . --write` or `npx eslint --ext .jsx --ext .js .`, etc.
 
 ## Additional Configurations
+
+Don't forget to add these helpful scripts in your `package.json`.
+
+```jsonc
+{
+  ...
+  "scripts:" {
+    ...
+    "lint": "next lint", // or "eslint --ext .jsx,.js,.tsx,.ts .",
+    "format": "prettier . --write"
+  }
+}
+```
 
 This repository includes both of the files mentioned below.
 
@@ -155,14 +202,6 @@ Additional comments included below.
 
 ```jsonc
 {
-  // Code Spell Checker: super useful VS Code extension
-  // to help avoid typos in your code & maintain consistency
-  "cSpell.words": ["ianvs"], // add additional words that are not typos
-  "cSpell.diagnosticLevel": "Hint", // removes it from your "Problems" tab
-  "workbench.colorCustomizations": { // cSpell will red underline the first 2 characters of a typo
-    "editorHint.foreground": "#ff0000",
-    "editorHint.border": "#ff0000",
-  },
   // removes error relating to `@tailwind` in your css files, e.g. `globals.css`
   // i.e. the "Unknown at rule @tailwind" warning
   "css.customData": ["./.vscode/tailwindcss.json"],
@@ -171,3 +210,19 @@ Additional comments included below.
 }
 ```
 
+Last but not least, I strongly recommend using VS Code extension: Code Spell Checker.
+It will by default show any incorrectly spelled words in your "Problems" tab.
+If you'd prefer not to have it show in your "Problems" tab, you can configure it so that it red underline the first 2 characters of a typo instead.
+
+```jsonc
+{
+  // Code Spell Checker: super useful VS Code extension
+  // to help avoid typos in your code & maintain consistency
+  "cSpell.words": ["ianvs"], // add additional words that are not typos
+  "cSpell.diagnosticLevel": "Hint", // removes it from your "Problems" tab
+  "workbench.colorCustomizations": {
+    "editorHint.foreground": "#ff0000",
+    "editorHint.border": "#ff0000",
+  },
+}
+```

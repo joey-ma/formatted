@@ -2,7 +2,6 @@
  * @see https://prettier.io/docs/en/configuration.html
  * @see https://github.com/trivago/prettier-plugin-sort-imports
  * @see https://github.com/tailwindlabs/prettier-plugin-tailwindcss
-//  * @type {import("prettier").Config}
  * @type {import("@ianvs/prettier-plugin-sort-imports").PrettierConfig} */
 
 module.exports = {
